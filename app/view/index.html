@@ -25,9 +25,12 @@ T̴͕͚̩͕̭o̯͙̳̺͕̹͎ ̜̦̗͍̫̩͚i͚͉̣̩ń͓͓͔v̜͇͇͇òk͎͎̖
                name='file'
                accept='image/*'
                onchange='showPicked(this)'>
-      </div>
-      <button class='choose-file-button' type='button' onclick='showPicker()'>Select Image</button>
-      <div class='upload-label'>
+      </div id="drop_area">
+      <form class="my_form">
+        <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
+        <button class='choose-file-button' type='button' onclick='showPicker()'>Select or Drop Image Files</button>
+      </form>
+        <div class='upload-label'>
         <label id='upload-label'>No file chosen</label>
       </div>
       <div>
